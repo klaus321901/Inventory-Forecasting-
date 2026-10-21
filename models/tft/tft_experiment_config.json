@@ -1,0 +1,57 @@
+{
+    "seed": 42,
+    "max_encoder_length": 120,
+    "max_prediction_length": 60,
+    "forecast_horizons": [
+        7,
+        14,
+        30,
+        60
+    ],
+    "quantiles": [
+        0.1,
+        0.5,
+        0.9
+    ],
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "hidden_size": 16,
+    "attention_head_size": 4,
+    "hidden_continuous_size": 8,
+    "dropout": 0.1,
+    "max_epochs": 8,
+    "early_stopping_patience": 2,
+    "train_end": "2017-04-30",
+    "validation_start": "2017-05-01",
+    "validation_end": "2017-06-29",
+    "static_categoricals": [
+        "series_id",
+        "store_nbr",
+        "item_nbr",
+        "family",
+        "class",
+        "store_type",
+        "cluster"
+    ],
+    "time_varying_known_categoricals": [
+        "promotion_status",
+        "day_of_week",
+        "month"
+    ],
+    "time_varying_known_reals": [
+        "time_idx",
+        "day_of_month",
+        "is_holiday",
+        "is_event",
+        "is_additional",
+        "is_transfer",
+        "is_bridge",
+        "is_work_day"
+    ],
+    "time_varying_unknown_reals": [
+        "tft_target",
+        "target_known"
+    ],
+    "best_validation_loss": 2.0257842540740967,
+    "training_minutes": 191.969757882754
+}
